@@ -44,7 +44,8 @@
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
-						<form>
+						<form action="{{ route('pedido.salvar') }}" method="POST">
+						{{ csrf_field() }}
 							<div class="form-group">
 								<label for="nAssento">Número do Assento</label>
 								<input type="text" class="form-control" id="nAssento" placeholder="Email">

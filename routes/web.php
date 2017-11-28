@@ -13,15 +13,18 @@
 
 //ROTAS DO CLIENTE
 Route::get('/', 'ItemController@listar');
-Route::get('/item/{id}', 'ItemController@mostrarItem');
-// Route::group(['middleware' => 'auth'], function(){
-// });
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/item/{id}', 'ItemController@mostrarItem');
+    Route::post('/pedido/salvar', 'PedidoController@salvar')->name('pedido.salvar');
+});
+// ======================================================
+
 
 //ROTAS DE ADMIN
 Route::get('/produto', 'ItemController@listarAdmin');
 Route::get('/produto/novo', 'ItemController@novoProduto');
 Route::post('/produto/salvar', 'ItemController@salvarProduto')->name('produto.salvar');
-
+// ======================================================
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

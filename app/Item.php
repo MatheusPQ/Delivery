@@ -9,4 +9,8 @@ class Item extends Model
     protected $fillable = [
         'nomeItem', 'descItem', 'precoItem', 'imagemItem'
     ];
+    
+    public function pedidos(){
+        return $this->hasMany('App\Pedido');
+    }
 }
