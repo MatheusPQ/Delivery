@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ItemController@listar');
+Route::get('/atualizar', 'ItemController@listarAdmin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

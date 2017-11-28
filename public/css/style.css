@@ -1,0 +1,164 @@
+body{
+	background: #eee;
+	font-family: 'Segoe UI', sans-serif;
+}
+img{
+	max-width: 100%;
+}
+a, button{
+	color: inherit;
+	text-decoration: none;
+	transition: all .3s ease;
+}
+a:hover, a:focus,
+button:hover, button:focus{
+	color: #d95626;
+	text-decoration: none;
+}
+section{
+	padding: 3em 0;
+}
+hr{
+	clear: both;
+	border: 1px solid #222;
+}
+.login__container{
+	margin-top: 80px;
+	background: #212735;
+	padding: 4em 2em;
+	color: #fff;
+	border: .25em dashed #fff;
+	box-shadow: 0 0 0 1em #212735, 0 .2em .2em 1em rgba(0,0,0,0.23);
+}
+.login__container h1{
+	margin-top: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.login__container .form-group{
+	margin: 1.5em 0;
+}
+.login__container .form-control{
+	background: transparent;
+	color: #ccc;
+	border-radius: 0;
+	border: none;
+	border-bottom: .1em solid #fff;
+	box-shadow: none;
+}
+.login__container .form-control:active{
+	box-shadow: none;
+}
+.login__img{
+	width: 100%;
+	text-align: center;
+}
+.btn-login{
+	display: block;
+	width: 60%;
+	margin: auto;
+	background: #d95626;
+	transition: all .3s ease;
+	border-radius: 0;
+	border: .1em solid #fff;
+	text-transform: uppercase;
+}
+.btn-login:hover, .btn-login:focus{
+	color: #fff;
+	opacity: .8;
+}
+
+.int__container{
+	border: .3em dashed #222;
+	padding: 0 1em;
+}
+.int__container h1{
+	text-align: center;
+	text-transform: uppercase;
+}
+.int__container h1:after{
+	content: '';
+	display: block;
+	width: 50px;
+	height: 2px;
+	background: #222;
+	margin: .5em auto;
+}
+.int__container ul{
+	padding: 0;
+}
+
+.int__item{
+	display: block;
+	width: 100%;
+	list-style: none;
+	margin: 1.5em auto;
+	text-align: center;
+}
+.item__container{
+	display: block;
+}
+.int__item img{
+	width: 125px;
+	border-radius: 100%;
+}
+
+.button-group{
+	text-align: center;
+	margin: 1.5em 0;
+}
+.button-group a, .button-group button{
+	display: inline-block;
+	font-size: 1.2em;
+	padding: .7em 1.5em;
+	text-transform: uppercase;
+	border: none;
+}
+
+.order{
+	text-align: center;
+	margin: 1em 0;
+}
+.order img{
+	width: 200px;
+	background: #fff;
+	padding: 1em;
+	border-radius: 100%;
+}
+.order li, .order p{
+	list-style: none;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+@media screen and (min-width: 786px){
+	.int__container ul{
+		width: 90%;
+		margin: auto;
+	}
+	.int__item{
+		width: 50%;
+		float: left;
+		text-align: left;
+	}
+	.item__container{
+		display: block;
+		float: left;
+	}
+	.int__item img{
+		width: 125px;
+		float: left;
+		border-radius: 100%;
+		box-sizing: border-box;
+	}
+	.item__text{
+		float: left;
+		margin-left: 1em;
+		min-height: 125px;
+	}
+
+	.order{
+		display: inline-block;
+		width: 49%;
+	}
+}
