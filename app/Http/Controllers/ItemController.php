@@ -18,10 +18,33 @@ class ItemController extends Controller
 
         return view('conferirPedido')->with('item', $item);
     }
+
+    public function novoProduto(){
+        return view('adicionarItem');
+    }
+    
+    public function salvarProduto(Request $req){
+        $item = $req->all();
+        
+        $num = Item::orderBy('id', 'desc')->first();
+        $num = $num->id + 1;
+
+        if($req->hasFile('imagemItem')){
+            $imagem = $req->file('imagemItem');
+            $dir = "img";
+            $ext = $imagem->guessClientExtension();
+            $nomeImagem = "icon-0".$num.".".$ext;
+            $imagem->move($dir, $nomeImagem);
+            $item['imagemItem'] = $dir."/".$nomeImagem;
+        }
+
+        Item::create($item);
+        return redirect('/produto');
+    }
     
     public function listarAdmin() {
-        // $itens = Item::all();
+        $itens = Item::all();
 
-        return view('atualizar');
+        return view('atualizar')->with('itens', $itens);
     }
 }
