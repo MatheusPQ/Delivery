@@ -12,6 +12,12 @@ class ItemController extends Controller
 
         return view('cardapio')->with('itens', $itens);
     }
+
+    public function mostrarItem($id_item) {
+        $item = Item::findOrFail($id_item);
+
+        return view('conferirPedido')->with('item', $item);
+    }
     
     public function listarAdmin() {
         // $itens = Item::all();

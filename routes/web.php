@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'ItemController@listar');
+Route::get('/item/{id}', 'ItemController@mostrarItem');
 Route::get('/atualizar', 'ItemController@listarAdmin');
 
 Auth::routes();

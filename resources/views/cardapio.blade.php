@@ -13,7 +13,7 @@
 						<ul class="row">
 						@foreach($itens as $item)
 							<li class="int__item">
-								<a href="#" class="item__container">
+								<a href="/item/{{$item->id}}" class="item__container">
 									<img src="{{$item->imagemItem}}">
 									<div class="item__text">
 										<h2>{{$item->nomeItem}}</h2>
