@@ -45,14 +45,15 @@
 					</div>
 					<div class="col-xs-12 col-md-6 col-md-offset-3">
 						<form action="{{ route('pedido.salvar') }}" method="POST">
-						{{ csrf_field() }}
+							{{ csrf_field() }}
+  							<input type="hidden" name="item_id" value="{{$item->id}}">
 							<div class="form-group">
-								<label for="nAssento">Número do Assento</label>
-								<input type="text" class="form-control" id="nAssento" placeholder="Email">
+								<label for="numeroAssento">Número do Assento</label>
+								<input type="text" class="form-control" name="numeroAssento" id="numeroAssento" placeholder="Nº Assento">
 							</div>
 							<div class="form-group">
-								<label for="nAssento">Observações</label>
-								<textarea type="text" class="form-control" id="nAssento" placeholder="Email"></textarea>
+								<label for="obsPedido">Observações</label>
+								<textarea type="text" class="form-control" name="obsPedido" id="obsPedido" placeholder="Observações"></textarea>
 							</div>
 							<div class="button-group">
 								<a href="/">Voltar</a>
