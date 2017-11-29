@@ -13,14 +13,15 @@
 					</div>
 					<div class="col-xs-12 col-md-6">
 						<h1>Login</h1>
-						<form method="post" action="#">
+						<form method="post" action="{{ route('login') }}">
+							{{ csrf_field() }}
 							<div class="form-group">
-								<label for="user">Usuário</label>
-								<input type="text" class="form-control" id="user" name="user">
+								<label for="email">Usuário</label>
+								<input type="text" class="form-control" id="email" name="email">
 							</div>
 							<div class="form-group">
-								<label for="pass">Senha</label>
-								<input type="password" class="form-control" id="pass" name="pass">
+								<label for="password">Senha</label>
+								<input type="password" class="form-control" id="password" name="password">
 							</div>
 							<button type="submit" class="btn btn-login btn-lg">Entrar</button>
 						</form>

@@ -20,18 +20,19 @@
 											<h2>{{$item->nomeItem}}</h2>
 											<p>{{$item->descItem}}</p>
 											<p>R$ {{$item->precoItem}}</p>
+											<p><a class="btn btn-danger btn-apagar" href="{{ route('produto.remover', $item->id) }}">Remover</a></p>
 										</div>
 									</a>
 								</li>
 							@endforeach
 						</ul>
 						<div class="button-group">
-							<a href="#">Alterar Itens</a>
+							{{--  <a href="#">Alterar Itens</a>  --}}
 							<a href="/produto/novo">Adicionar Novo Item</a>
 						</div>
 						<div class="button-group">
-							<a href="#">Cancelar</a>
-							<a href="#">Confirmar</a>
+							<a href="/">Cancelar</a>
+							<a href="/pedidos/conferir">Ver Pedidos</a>
 						</div>
 					</div>
 				</div>

@@ -47,4 +47,9 @@ class ItemController extends Controller
 
         return view('atualizar')->with('itens', $itens);
     }
+    
+    public function removerProduto($id){
+        Item::find($id)->delete(); 
+        return redirect('/produto');
+    }
 }

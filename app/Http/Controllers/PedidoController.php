@@ -23,4 +23,10 @@ class PedidoController extends Controller
 
         return redirect('/');
     }
+
+    public function mostrar(){
+        $pedidos = Pedido::where('statusPedido', 'PENDENTE')->get();
+
+        return view('receberPedido')->with('pedidos', $pedidos);
+    }
 }

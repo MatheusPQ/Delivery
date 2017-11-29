@@ -24,6 +24,9 @@ Route::group(['middleware' => 'auth'], function(){
 Route::get('/produto', 'ItemController@listarAdmin');
 Route::get('/produto/novo', 'ItemController@novoProduto');
 Route::post('/produto/salvar', 'ItemController@salvarProduto')->name('produto.salvar');
+Route::get('/produto/remover/{id}', 'ItemController@removerProduto')->name('produto.remover');
+Route::get('/pedidos/conferir', 'PedidoController@mostrar');
+Route::put('/pedidos/concluir/{id}', 'PedidoController@concluirPedido')->name('pedido.concluir');
 // ======================================================
 Auth::routes();
 
